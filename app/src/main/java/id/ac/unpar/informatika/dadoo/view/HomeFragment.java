@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
@@ -14,7 +15,7 @@ import id.ac.unpar.informatika.dadoo.presenter.IMainPresenter;
 import id.ac.unpar.informatika.dadoo.thread.RandomThread;
 import id.ac.unpar.informatika.dadoo.thread.ThreadHandler;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     private FragmentHomeBinding binding;
     private IMainActivity listener;
     private IMainPresenter presenter;
@@ -26,6 +27,7 @@ public class HomeFragment extends Fragment {
         View view = FragmentHomeBinding.inflate(inflater, container, false).getRoot();
         this.binding = FragmentHomeBinding.bind(view);
 
+        this.binding.btnRng.setOnClickListener(this);
         return view;
     }
 
@@ -54,5 +56,12 @@ public class HomeFragment extends Fragment {
     public void startThread() {
         this.thread = new RandomThread(this.handler);
         this.thread.start();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v == this.binding.btnRng){
+            this.startThread();
+        }
     }
 }

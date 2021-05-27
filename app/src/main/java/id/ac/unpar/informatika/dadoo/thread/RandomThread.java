@@ -22,7 +22,6 @@ public class RandomThread implements Runnable {
                 this.handler.setAngka(this.angka);
                 Log.d("angka", String.valueOf(angka));
                 this.start = false;
-                this.thread.stop();
             }
         } catch (Exception e) {
             e.printStackTrace();
