@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +7,7 @@
     android:layout_margin = "@dimen/app_margin">
 
     <TextView
+        android:id="@+id/tv_instruksi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -15,19 +16,22 @@
         android:textSize="@dimen/font_20"/>
 
     <TextView
-        android:id="@+id/tv_angka"
+        android:id="@+id/tv_hasil"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/tv_instruksi"
+        android:layout_above="@id/btn_kocok"
         android:textAlignment="center"
         android:gravity="center"
         android:textSize="@dimen/font_24"
         android:text="@string/shake_me" />
 
     <Button
-        android:id="@+id/btn_rng"
+        android:id="@+id/btn_kocok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Butt on"/>
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/kocok"/>
 
-</LinearLayout>
+</RelativeLayout>

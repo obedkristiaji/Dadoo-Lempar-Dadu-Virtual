@@ -2,4 +2,5 @@
     <string name="app_name">Dadoo</string>
     <string name="instruksi">Goyangkan smartphone atau tekan tombol untuk melempar dadu.</string>
     <string name="shake_me">Shake Me!</string>
+    <string name="kocok">Kocok</string>
 </resources>
