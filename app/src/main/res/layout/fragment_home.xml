@@ -4,19 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginHorizontal="@dimen/hmargin">
+    android:layout_margin = "@dimen/app_margin">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:text="@string/instruksi" />
+        android:text="@string/instruksi"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_20"/>
 
     <TextView
         android:id="@+id/tv_angka"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="@dimen/font_24"
         android:text="@string/shake_me" />
 
 </LinearLayout>
