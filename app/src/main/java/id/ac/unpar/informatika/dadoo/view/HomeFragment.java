@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
@@ -21,6 +22,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private IMainPresenter presenter;
     private ThreadHandler handler;
     private RandomThread thread;
+    private ImageView imageView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -49,8 +51,27 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         return fragment;
     }
 
-    public void setAngka(String s) {
-        this.binding.tvAngka.setText(s);
+    public void setGambar(int num){
+        this.binding.tvAngka.setVisibility(View.GONE);
+        if(num==1){
+            int imageResource = getResources().getIdentifier("@drawable/1",null,null);
+            this.binding.imgDadu.setImageResource(imageResource);
+        }else if(num==2){
+            int imageResource = getResources().getIdentifier("@drawable/2",null,null);
+            this.binding.imgDadu.setImageResource(imageResource);
+        }else if(num==3){
+            int imageResource = getResources().getIdentifier("@drawable/3",null,null);
+            this.binding.imgDadu.setImageResource(imageResource);
+        }else if(num==4){
+            int imageResource = getResources().getIdentifier("@drawable/4",null,null);
+            this.binding.imgDadu.setImageResource(imageResource);
+        }else if(num==5){
+            int imageResource = getResources().getIdentifier("@drawable/5",null,null);
+            this.binding.imgDadu.setImageResource(imageResource);
+        }else if(num==6){
+            int imageResource = getResources().getIdentifier("@drawable/6",null,null);
+            this.binding.imgDadu.setImageResource(imageResource);
+        }
     }
 
     public void startThread() {
