@@ -21,7 +21,7 @@ public class ThreadHandler extends Handler {
         }
     }
 
-    public void setAngka(int angka) {
+    public void setGambar(int angka) {
         Message msg = new Message();
         msg.what = MSG_SET_ANGKA;
         msg.obj = angka;

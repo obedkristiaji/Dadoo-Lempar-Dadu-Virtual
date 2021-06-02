@@ -19,7 +19,7 @@ public class RandomThread implements Runnable {
         try {
             while(start) {
                 this.angka = min + (int)(Math.random() * ((max - min) + 1));
-                this.handler.setAngka(this.angka);
+                this.handler.setGambar(this.angka);
                 Log.d("angka", String.valueOf(angka));
                 this.start = false;
             }
