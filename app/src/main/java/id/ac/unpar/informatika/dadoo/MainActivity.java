@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivity, Se
     }
 
     @Override
-    public void setAngka(String s) {
-        this.fragmentHome.setAngka(s);
+    public void setGambar(int num) {
+        this.fragmentHome.setGambar(num);
     }
 }
