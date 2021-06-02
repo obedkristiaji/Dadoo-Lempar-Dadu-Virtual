@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import androidx.fragment.app.Fragment;
 
 import id.ac.unpar.informatika.dadoo.IMainActivity;
+import id.ac.unpar.informatika.dadoo.R;
 import id.ac.unpar.informatika.dadoo.databinding.FragmentHomeBinding;
 import id.ac.unpar.informatika.dadoo.presenter.IMainPresenter;
 import id.ac.unpar.informatika.dadoo.thread.RandomThread;
@@ -54,23 +55,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void setGambar(int num){
         this.binding.tvAngka.setVisibility(View.GONE);
         if(num==1){
-            int imageResource = getResources().getIdentifier("@drawable/dadu1",null,null);
-            this.binding.imgDadu.setImageResource(imageResource);
+            this.binding.imgDadu.setImageResource(R.drawable.dadu1);
         }else if(num==2){
-            int imageResource = getResources().getIdentifier("@drawable/dadu2",null,null);
-            this.binding.imgDadu.setImageResource(imageResource);
+            this.binding.imgDadu.setImageResource(R.drawable.dadu2);
         }else if(num==3){
-            int imageResource = getResources().getIdentifier("@drawable/dadu3",null,null);
-            this.binding.imgDadu.setImageResource(imageResource);
+            this.binding.imgDadu.setImageResource(R.drawable.dadu3);
         }else if(num==4){
-            int imageResource = getResources().getIdentifier("@drawable/dadu4",null,null);
-            this.binding.imgDadu.setImageResource(imageResource);
+            this.binding.imgDadu.setImageResource(R.drawable.dadu4);
         }else if(num==5){
-            int imageResource = getResources().getIdentifier("@drawable/dadu5",null,null);
-            this.binding.imgDadu.setImageResource(imageResource);
+            this.binding.imgDadu.setImageResource(R.drawable.dadu5);
         }else if(num==6){
-            int imageResource = getResources().getIdentifier("@drawable/dadu6",null,null);
-            this.binding.imgDadu.setImageResource(imageResource);
+            this.binding.imgDadu.setImageResource(R.drawable.dadu6);
         }
     }
 

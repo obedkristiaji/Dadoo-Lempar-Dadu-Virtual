@@ -26,6 +26,6 @@
         android:layout_gravity="center_horizontal"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Butt on"/>
+        android:text="ROLL"/>
 
 </RelativeLayout>
