@@ -1,7 +1,10 @@
 package id.ac.unpar.informatika.dadoo.view;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -77,6 +80,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v == this.binding.btnRng){
+            Vibrator vib = (Vibrator)  getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vib.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                vib.vibrate(200);
+            }
             this.startThread();
         }
     }

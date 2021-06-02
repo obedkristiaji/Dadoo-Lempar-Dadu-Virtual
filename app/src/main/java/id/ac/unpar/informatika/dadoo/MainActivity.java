@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivity, Se
     private SensorManager mSensorManager;
     private Sensor accelerometer;
     private float[] accelerometerReading = new float[3];
-    private int shakeThreshold = 1200;
+    private int shakeThreshold = 800;
     private long lastUpdate = 0;
 
     @Override
