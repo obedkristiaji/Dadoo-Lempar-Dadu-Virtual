@@ -54,22 +54,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void setGambar(int num){
         this.binding.tvAngka.setVisibility(View.GONE);
         if(num==1){
-            int imageResource = getResources().getIdentifier("@drawable/1",null,null);
+            int imageResource = getResources().getIdentifier("@drawable/dadu1",null,null);
             this.binding.imgDadu.setImageResource(imageResource);
         }else if(num==2){
-            int imageResource = getResources().getIdentifier("@drawable/2",null,null);
+            int imageResource = getResources().getIdentifier("@drawable/dadu2",null,null);
             this.binding.imgDadu.setImageResource(imageResource);
         }else if(num==3){
-            int imageResource = getResources().getIdentifier("@drawable/3",null,null);
+            int imageResource = getResources().getIdentifier("@drawable/dadu3",null,null);
             this.binding.imgDadu.setImageResource(imageResource);
         }else if(num==4){
-            int imageResource = getResources().getIdentifier("@drawable/4",null,null);
+            int imageResource = getResources().getIdentifier("@drawable/dadu4",null,null);
             this.binding.imgDadu.setImageResource(imageResource);
         }else if(num==5){
-            int imageResource = getResources().getIdentifier("@drawable/5",null,null);
+            int imageResource = getResources().getIdentifier("@drawable/dadu5",null,null);
             this.binding.imgDadu.setImageResource(imageResource);
         }else if(num==6){
-            int imageResource = getResources().getIdentifier("@drawable/6",null,null);
+            int imageResource = getResources().getIdentifier("@drawable/dadu6",null,null);
             this.binding.imgDadu.setImageResource(imageResource);
         }
     }
