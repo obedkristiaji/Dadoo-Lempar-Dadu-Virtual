@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View view = FragmentHomeBinding.inflate(inflater, container, false).getRoot();
         this.binding = FragmentHomeBinding.bind(view);
 
-        this.binding.btnRng.setOnClickListener(this);
+        this.binding.btnKocok.setOnClickListener(this);
         return view;
     }
 
@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     public void setAngka(String s) {
-        this.binding.tvAngka.setText(s);
+        this.binding.tvHasil.setText(s);
     }
 
     public void startThread() {
@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v == this.binding.btnRng){
+        if(v == this.binding.btnKocok){
             this.startThread();
         }
     }
