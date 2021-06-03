@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View view = FragmentHomeBinding.inflate(inflater, container, false).getRoot();
         this.binding = FragmentHomeBinding.bind(view);
 
-        this.binding.btnRng.setOnClickListener(this);
+        this.binding.btnKocok.setOnClickListener(this);
         return view;
     }
 
@@ -54,7 +54,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         fragment.presenter = presenter;
         return fragment;
     }
-
+      
     public void setGambar(int num){
         this.binding.tvAngka.setVisibility(View.GONE);
         if(num==1){
@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v == this.binding.btnRng){
+        if(v == this.binding.btnKocok){
             Vibrator vib = (Vibrator)  getActivity().getSystemService(Context.VIBRATOR_SERVICE);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vib.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
