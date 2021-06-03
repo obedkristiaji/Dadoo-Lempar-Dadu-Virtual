@@ -26,6 +26,13 @@
         android:textSize="@dimen/font_24"
         android:text="@string/shake_me" />
 
+    <ImageView
+        android:id="@+id/imgDadu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+  
     <Button
         android:id="@+id/btn_kocok"
         android:layout_width="wrap_content"

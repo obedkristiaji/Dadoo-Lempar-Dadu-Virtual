@@ -17,12 +17,11 @@ public class ThreadHandler extends Handler {
     public void handleMessage(Message msg) {
         if(msg.what == this.MSG_SET_ANGKA) {
             int angka = (int) msg.obj;
-            String s = Integer.toString(angka);
-            this.presenter.setAngka(s);
+            this.presenter.setGambar(angka);
         }
     }
 
-    public void setAngka(int angka) {
+    public void setGambar(int angka) {
         Message msg = new Message();
         msg.what = MSG_SET_ANGKA;
         msg.obj = angka;

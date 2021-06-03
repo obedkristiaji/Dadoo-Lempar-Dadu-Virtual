@@ -1,15 +1,20 @@
 package id.ac.unpar.informatika.dadoo.view;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
 import id.ac.unpar.informatika.dadoo.IMainActivity;
+import id.ac.unpar.informatika.dadoo.R;
 import id.ac.unpar.informatika.dadoo.databinding.FragmentHomeBinding;
 import id.ac.unpar.informatika.dadoo.presenter.IMainPresenter;
 import id.ac.unpar.informatika.dadoo.thread.RandomThread;
@@ -21,6 +26,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private IMainPresenter presenter;
     private ThreadHandler handler;
     private RandomThread thread;
+    private ImageView imageView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
@@ -48,9 +54,22 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         fragment.presenter = presenter;
         return fragment;
     }
-
-    public void setAngka(String s) {
-        this.binding.tvHasil.setText(s);
+      
+    public void setGambar(int num){
+        this.binding.tvAngka.setVisibility(View.GONE);
+        if(num==1){
+            this.binding.imgDadu.setImageResource(R.drawable.dadu1);
+        }else if(num==2){
+            this.binding.imgDadu.setImageResource(R.drawable.dadu2);
+        }else if(num==3){
+            this.binding.imgDadu.setImageResource(R.drawable.dadu3);
+        }else if(num==4){
+            this.binding.imgDadu.setImageResource(R.drawable.dadu4);
+        }else if(num==5){
+            this.binding.imgDadu.setImageResource(R.drawable.dadu5);
+        }else if(num==6){
+            this.binding.imgDadu.setImageResource(R.drawable.dadu6);
+        }
     }
 
     public void startThread() {
@@ -61,6 +80,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v == this.binding.btnKocok){
+            Vibrator vib = (Vibrator)  getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vib.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                vib.vibrate(200);
+            }
             this.startThread();
         }
     }

@@ -10,7 +10,7 @@ public class MainPresenter implements IMainPresenter {
     }
 
     @Override
-    public void setAngka(String s) {
-        this.view.setAngka(s);
+    public void setGambar(int num) {
+        this.view.setGambar(num);
     }
 }

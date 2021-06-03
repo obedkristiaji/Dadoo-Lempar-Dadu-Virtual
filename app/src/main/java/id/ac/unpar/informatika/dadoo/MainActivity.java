@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivity, Se
     private SensorManager mSensorManager;
     private Sensor accelerometer;
     private float[] accelerometerReading = new float[3];
-    private int shakeThreshold = 1200;
+    private int shakeThreshold = 800;
     private long lastUpdate = 0;
 
     @Override
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivity, Se
     }
 
     @Override
-    public void setAngka(String s) {
-        this.fragmentHome.setAngka(s);
+    public void setGambar(int num) {
+        this.fragmentHome.setGambar(num);
     }
 }
