@@ -8,7 +8,6 @@ import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
@@ -33,7 +32,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View view = FragmentHomeBinding.inflate(inflater, container, false).getRoot();
         this.binding = FragmentHomeBinding.bind(view);
 
-        this.binding.btnKocok.setOnClickListener(this);
+        this.binding.btnLempar.setOnClickListener(this);
+        this.binding.btnTentang.setOnClickListener(this);
         return view;
     }
 
@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if(v == this.binding.btnKocok){
+        if (v == this.binding.btnLempar) {
             Vibrator vib = (Vibrator)  getActivity().getSystemService(Context.VIBRATOR_SERVICE);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vib.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
@@ -88,6 +88,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 vib.vibrate(200);
             }
             this.startThread();
+        } else if (v == this.binding.btnTentang) {
+            this.listener.changePage("About");
         }
     }
 }
