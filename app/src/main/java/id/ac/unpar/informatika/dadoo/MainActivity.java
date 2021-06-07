@@ -19,6 +19,7 @@ import android.view.View;
 import id.ac.unpar.informatika.dadoo.databinding.ActivityMainBinding;
 import id.ac.unpar.informatika.dadoo.presenter.MainPresenter;
 import id.ac.unpar.informatika.dadoo.thread.ThreadHandler;
+import id.ac.unpar.informatika.dadoo.view.AboutFragment;
 import id.ac.unpar.informatika.dadoo.view.HomeFragment;
 
 public class MainActivity extends AppCompatActivity implements IMainActivity, SensorEventListener {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivity, Se
     private MainPresenter presenter;
     private FragmentManager fragmentManager;
     private HomeFragment fragmentHome;
+    private AboutFragment fragmentAbout;
     private ThreadHandler handler;
     private SensorManager mSensorManager;
     private Sensor accelerometer;
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements IMainActivity, Se
         this.handler = new ThreadHandler(this.presenter);
 
         this.fragmentHome = HomeFragment.newInstance(this.presenter, this.handler);
+        this.fragmentAbout = AboutFragment.newInstance(this.presenter);
         this.fragmentManager = this.getSupportFragmentManager();
 
         this.changePage("Home");
@@ -107,7 +110,12 @@ public class MainActivity extends AppCompatActivity implements IMainActivity, Se
         switch (page) {
             case "Home": {
                 this.fragmentManager.popBackStackImmediate();
-                ft.replace(binding.fragmentContainer.getId(), this.fragmentHome, "Home").addToBackStack(null);
+                ft.replace(binding.fragmentContainer.getId(), this.fragmentHome).addToBackStack(null);
+                break;
+            }
+            case "About": {
+                ft.replace(binding.fragmentContainer.getId(), this.fragmentAbout).addToBackStack(null);
+                break;
             }
         }
         ft.commit();

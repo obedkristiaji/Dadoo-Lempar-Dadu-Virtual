@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Dadoo</string>
     <string name="instruksi">Goyangkan smartphone atau tekan tombol untuk melempar dadu.</string>
-    <string name="shake_me">Shake Me!</string>
-    <string name="kocok">Kocok</string>
+    <string name="lempar">Lempar Dadu</string>
+    <string name="tentang">Tentang Kami</string>
+    <string name="kembali">Kembali</string>
+    <string name="kode">Kode Program:</string>
+    <string name="pengembang">Pengembang:</string>
+    <string name="web">Laman Web Informatika UNPAR</string>
 </resources>

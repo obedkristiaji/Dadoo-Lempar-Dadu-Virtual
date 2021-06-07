@@ -4,4 +4,5 @@
 
     <dimen name="font_20">20sp</dimen>
     <dimen name="font_24">24sp</dimen>
+    <dimen name="font_logo">120px</dimen>
 </resources>

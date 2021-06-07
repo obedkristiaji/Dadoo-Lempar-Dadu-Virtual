@@ -10,15 +10,12 @@
         android:roundIcon="@drawable/dadu4"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dadoo">
-        <activity android:name=".SplashActivity">
+        <activity android:name="id.ac.unpar.informatika.dadoo.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 
