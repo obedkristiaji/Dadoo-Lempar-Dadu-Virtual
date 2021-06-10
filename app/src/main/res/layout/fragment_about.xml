@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="@dimen/margin_30">
+    android:layout_margin="@dimen/app_margin">
 
     <TextView
         android:id="@+id/tv_judul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/app_margin"
+        android:layout_marginBottom="@dimen/margin_30"
         android:text="@string/tentang"
         android:textSize="@dimen/font_30"
         android:textStyle="bold" />
