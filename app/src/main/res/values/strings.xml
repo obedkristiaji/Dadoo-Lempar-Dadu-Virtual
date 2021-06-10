@@ -2,6 +2,7 @@
     <string name="app_name">Dadoo</string>
     <string name="instruksi">Goyangkan smartphone atau tekan tombol untuk melempar dadu.</string>
     <string name="lempar">Lempar Dadu</string>
+    <string name="tentang_dadoo_underlined"><u>Tentang Dadoo</u></string>
     <string name="tentang_dadoo">Tentang Dadoo</string>
     <string name="kembali">Kembali</string>
     <string name="kode">Kode Program:</string>

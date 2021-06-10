@@ -23,7 +23,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
         View view = FragmentAboutBinding.inflate(inflater, container, false).getRoot();
         this.binding = FragmentAboutBinding.bind(view);
 
-        this.binding.btnKembali.setOnClickListener(this);
+        this.binding.ivBack.setOnClickListener(this);
         Linkify.addLinks(this.binding.tvGithub, Linkify.WEB_URLS);
         Linkify.addLinks(this.binding.tvIf, Linkify.WEB_URLS);
         return view;
@@ -48,7 +48,7 @@ public class AboutFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v == this.binding.btnKembali) {
+        if (v == this.binding.ivBack) {
             this.listener.changePage("Home");
         }
     }
