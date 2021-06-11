@@ -38,16 +38,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_pengembang"
-        android:text="Kenny Gohan Siahaan"
+        android:text="@string/nama_kenny"
         android:textSize="@dimen/font_16"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(2015730065)"
+        android:text="@string/npm_kenny"
         android:layout_below="@id/tv_pengembang"
         android:layout_toEndOf="@id/tv_kenny"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textAlignment="textEnd"
         android:textSize="@dimen/font_16"/>
 
@@ -56,16 +56,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_kenny"
-        android:text="Mega Rahmat"
+        android:text="@string/nama_mega"
         android:textSize="@dimen/font_16"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(2017730021)"
+        android:text="@string/npm_mega"
         android:layout_below="@id/tv_kenny"
         android:layout_toEndOf="@id/tv_mega"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textAlignment="textEnd"
         android:textSize="@dimen/font_16"/>
 
@@ -74,16 +74,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_mega"
-        android:text="Obed Kristiaji Sudarman"
+        android:text="@string/nama_obed"
         android:textSize="@dimen/font_16"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(6181801003)"
+        android:text="@string/npm_obed"
         android:layout_below="@id/tv_mega"
         android:layout_toEndOf="@id/tv_obed"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textAlignment="textEnd"
         android:textSize="@dimen/font_16"/>
 
@@ -92,16 +92,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_obed"
-        android:text="Johan Adi Wiguna"
+        android:text="@string/nama_johan"
         android:textSize="@dimen/font_16"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(6181801018)"
+        android:text="@string/npm_johan"
         android:layout_below="@id/tv_obed"
         android:layout_toEndOf="@id/tv_johan"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textAlignment="textEnd"
         android:textSize="@dimen/font_16"/>
 
@@ -110,16 +110,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_johan"
-        android:text="Lucyus Matthew Ardivan"
+        android:text="@string/nama_lucyus"
         android:textSize="@dimen/font_16"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(6181801029)"
+        android:text="@string/npm_lucyus"
         android:layout_below="@id/tv_johan"
         android:layout_toEndOf="@id/tv_lucyus"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textAlignment="textEnd"
         android:textSize="@dimen/font_16"/>
 
@@ -129,16 +129,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_lucyus"
         android:layout_marginBottom="@dimen/app_margin"
-        android:text="Craven Sachio Saputra"
+        android:text="@string/nama_craven"
         android:textSize="@dimen/font_16"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="(6181801063)"
+        android:text="@string/npm_craven"
         android:layout_below="@id/tv_lucyus"
         android:layout_toEndOf="@id/tv_craven"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:textAlignment="textEnd"
         android:textSize="@dimen/font_16"/>
 
@@ -155,7 +155,7 @@
         android:id="@+id/tv_github"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="https://github.com/ifunpar/Dadoo-Lempar-Dadu-Virtual"
+        android:text="@string/url_kode_program"
         android:layout_below="@id/tv_kode"
         android:textSize="@dimen/font_16"
         android:layout_marginBottom="@dimen/app_margin"/>
@@ -164,7 +164,7 @@
         android:id="@+id/tv_web"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/web"
+        android:text="@string/dibuat"
         android:layout_below="@id/tv_github"
         android:textStyle="bold"
         android:textSize="@dimen/font_20"/>
@@ -173,7 +173,7 @@
         android:id="@+id/tv_if"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="https://informatika.unpar.ac.id/"
+        android:text="@string/url_informatika_unpar"
         android:layout_below="@id/tv_web"
         android:textSize="@dimen/font_16"/>
 
@@ -186,6 +186,6 @@
         android:fontFamily="@font/nova_flat_regular"
         android:text="@string/app_name"
         android:textSize="@dimen/font_28"
-        android:textColor="@color/light_grey"/>
+        android:textColor="?android:attr/textColorSecondaryNoDisable"/>
 
 </RelativeLayout>
