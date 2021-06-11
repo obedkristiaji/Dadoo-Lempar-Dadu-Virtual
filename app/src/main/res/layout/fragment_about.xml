@@ -31,7 +31,7 @@
         android:layout_below="@id/tv_judul"
         android:text="@string/pengembang"
         android:textStyle="bold"
-        android:textSize="@dimen/font_20"/>
+        android:textSize="@dimen/font_18"/>
 
     <TextView
         android:id="@+id/tv_kenny"
@@ -149,7 +149,7 @@
         android:text="@string/kode"
         android:layout_below="@id/tv_craven"
         android:textStyle="bold"
-        android:textSize="@dimen/font_20"/>
+        android:textSize="@dimen/font_18"/>
 
     <TextView
         android:id="@+id/tv_github"
@@ -167,7 +167,7 @@
         android:text="@string/dibuat"
         android:layout_below="@id/tv_github"
         android:textStyle="bold"
-        android:textSize="@dimen/font_20"/>
+        android:textSize="@dimen/font_18"/>
 
     <TextView
         android:id="@+id/tv_if"
