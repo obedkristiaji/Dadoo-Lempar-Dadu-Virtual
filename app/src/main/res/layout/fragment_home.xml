@@ -40,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/btn_tentang"
+        android:background="@drawable/border_radius"
         android:fontFamily="@font/nova_flat_regular"
         android:text="@string/lempar"/>
 
