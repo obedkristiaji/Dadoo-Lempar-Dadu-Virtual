@@ -2,9 +2,24 @@
     <string name="app_name">Dadoo</string>
     <string name="instruksi">Goyangkan smartphone atau tekan tombol untuk melempar dadu.</string>
     <string name="lempar">Lempar Dadu</string>
-    <string name="tentang">Tentang Kami</string>
+    <string name="tentang_dadoo_underlined"><u>Tentang Dadoo</u></string>
+    <string name="tentang_dadoo">Tentang Dadoo</string>
     <string name="kembali">Kembali</string>
-    <string name="kode">Kode Program:</string>
+    <string name="kode">Kode program:</string>
     <string name="pengembang">Pengembang:</string>
-    <string name="web">Laman Web Informatika UNPAR:</string>
+    <string name="dibuat">Aplikasi ini dibuat untuk menyelesaikan tugas kuliah di:</string>
+    <string name="url_informatika_unpar">https://informatika.unpar.ac.id</string>
+    <string name="url_kode_program">https://github.com/ifunpar/Dadoo-Lempar-Dadu-Virtual</string>
+    <string name="nama_kenny">Kenny Gohan Siahaan</string>
+    <string name="npm_kenny">(2015730065)</string>
+    <string name="nama_mega">Mega Rahmat</string>
+    <string name="npm_mega">(2017730021)</string>
+    <string name="nama_obed">Obed Kristiaji Sudarman</string>
+    <string name="npm_obed">(6181801003)</string>
+    <string name="nama_johan">Johan Adi Wiguna</string>
+    <string name="npm_johan">(6181801018)</string>
+    <string name="nama_lucyus">Lucyus Matthew Ardivan</string>
+    <string name="npm_lucyus">(6181801029)</string>
+    <string name="nama_craven">Craven Sachio Saputra</string>
+    <string name="npm_craven">(6181801063)</string>
 </resources>

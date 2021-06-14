@@ -7,45 +7,51 @@
     android:layout_margin = "@dimen/app_margin">
 
     <TextView
-        android:id="@+id/tv_instruksi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="@string/instruksi"
-        android:textStyle="bold"
-        android:textSize="@dimen/font_20"/>
-
-    <TextView
-        android:id="@+id/tv_home"
+        android:id="@+id/tv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/app_name"
+        android:layout_marginBottom="@dimen/margin_10"
         android:fontFamily="@font/nova_flat_regular"
-        android:textSize="@dimen/font_logo"/>
+        android:text="@string/app_name"
+        android:textSize="@dimen/font_28"
+        android:textColor="?android:attr/textColorPrimary"/>
+
+    <TextView
+        android:id="@+id/tv_instruksi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_logo"
+        android:textAlignment="center"
+        android:text="@string/instruksi"
+        android:textStyle="bold"
+        android:textSize="@dimen/font_18"/>
 
     <ImageView
         android:id="@+id/img_dadu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_10"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
   
     <Button
         android:id="@+id/btn_lempar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
+        android:layout_above="@id/btn_tentang"
+        android:background="@drawable/border_radius"
+        android:fontFamily="@font/nova_flat_regular"
         android:text="@string/lempar"/>
 
-    <Button
+    <TextView
         android:id="@+id/btn_tentang"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/tentang"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="@dimen/margin_10"
+        android:text="@string/tentang_dadoo_underlined"
+        android:textSize="@dimen/font_16"/>
 
 </RelativeLayout>

@@ -114,7 +114,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Sens
 
 
     public void setGambar(int num){
-        this.binding.tvHome.setVisibility(View.GONE);
         if(num==1){
             this.binding.imgDadu.setImageResource(R.drawable.dadu1);
         }else if(num==2){

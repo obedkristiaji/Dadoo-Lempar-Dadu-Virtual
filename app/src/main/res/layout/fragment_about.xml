@@ -6,109 +6,193 @@
     android:orientation="vertical"
     android:layout_margin="@dimen/app_margin">
 
-    <TextView
-        android:id="@+id/tv_judul"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/margin_30"
-        android:text="@string/tentang"
-        android:textSize="@dimen/font_30"
-        android:textStyle="bold" />
+        android:layout_marginBottom="@dimen/margin_20">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back_28"/>
+
+        <TextView
+            android:id="@+id/tv_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/tentang_dadoo"
+            android:textSize="@dimen/font_24"
+            android:textColor="?android:attr/textColorPrimary"/>
+
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_pengembang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/rl_header"
         android:text="@string/pengembang"
-        android:layout_below="@id/tv_judul"
         android:textStyle="bold"
-        android:textSize="@dimen/font_20"/>
-
-    <TextView
-        android:id="@+id/tv_craven"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Craven Sachio Saputra (6181801063)"
-        android:layout_below="@id/tv_pengembang"/>
-
-    <TextView
-        android:id="@+id/tv_johan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Johan Adi Wiguna (6181801018)"
-        android:layout_below="@id/tv_craven"/>
+        android:textSize="@dimen/font_18"/>
 
     <TextView
         android:id="@+id/tv_kenny"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kenny Gohan Siahaan (2015730065)"
-        android:layout_below="@id/tv_johan"/>
+        android:layout_below="@id/tv_pengembang"
+        android:text="@string/nama_kenny"
+        android:textSize="@dimen/font_16"/>
 
     <TextView
-        android:id="@+id/tv_lucyus"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lucyus Matthew Ardivan (6181801029)"
-        android:layout_below="@id/tv_kenny"/>
+        android:text="@string/npm_kenny"
+        android:layout_below="@id/tv_pengembang"
+        android:layout_toEndOf="@id/tv_kenny"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/font_16"/>
 
     <TextView
         android:id="@+id/tv_mega"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mega Rahmat (2017730021)"
-        android:layout_below="@id/tv_lucyus"/>
+        android:layout_below="@id/tv_kenny"
+        android:text="@string/nama_mega"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/npm_mega"
+        android:layout_below="@id/tv_kenny"
+        android:layout_toEndOf="@id/tv_mega"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/font_16"/>
 
     <TextView
         android:id="@+id/tv_obed"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Obed Kristiaji Sudarman (6181801003)"
         android:layout_below="@id/tv_mega"
-        android:layout_marginBottom="@dimen/app_margin"/>
+        android:text="@string/nama_obed"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/npm_obed"
+        android:layout_below="@id/tv_mega"
+        android:layout_toEndOf="@id/tv_obed"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:id="@+id/tv_johan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_obed"
+        android:text="@string/nama_johan"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/npm_johan"
+        android:layout_below="@id/tv_obed"
+        android:layout_toEndOf="@id/tv_johan"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:id="@+id/tv_lucyus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_johan"
+        android:text="@string/nama_lucyus"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/npm_lucyus"
+        android:layout_below="@id/tv_johan"
+        android:layout_toEndOf="@id/tv_lucyus"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:id="@+id/tv_craven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_lucyus"
+        android:layout_marginBottom="@dimen/app_margin"
+        android:text="@string/nama_craven"
+        android:textSize="@dimen/font_16"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/npm_craven"
+        android:layout_below="@id/tv_lucyus"
+        android:layout_toEndOf="@id/tv_craven"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/font_16"/>
 
     <TextView
         android:id="@+id/tv_kode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/kode"
-        android:layout_below="@id/tv_obed"
+        android:layout_below="@id/tv_craven"
         android:textStyle="bold"
-        android:textSize="@dimen/font_20"/>
+        android:textSize="@dimen/font_18"/>
 
     <TextView
         android:id="@+id/tv_github"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="https://github.com/ifunpar/Dadoo-Lempar-Dadu-Virtual"
+        android:text="@string/url_kode_program"
         android:layout_below="@id/tv_kode"
-        android:textSize="@dimen/font_20"
+        android:textSize="@dimen/font_16"
         android:layout_marginBottom="@dimen/app_margin"/>
 
     <TextView
         android:id="@+id/tv_web"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/web"
+        android:text="@string/dibuat"
         android:layout_below="@id/tv_github"
         android:textStyle="bold"
-        android:textSize="@dimen/font_20"/>
+        android:textSize="@dimen/font_18"/>
 
     <TextView
         android:id="@+id/tv_if"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="https://informatika.unpar.ac.id/"
+        android:text="@string/url_informatika_unpar"
         android:layout_below="@id/tv_web"
-        android:textSize="@dimen/font_20"/>
+        android:textSize="@dimen/font_16"/>
 
-    <Button
-        android:id="@+id/btn_kembali"
+    <TextView
+        android:id="@+id/tv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="@string/kembali"/>
+        android:layout_alignParentBottom="true"
+        android:fontFamily="@font/nova_flat_regular"
+        android:text="@string/app_name"
+        android:textSize="@dimen/font_28"
+        android:textColor="?android:attr/textColorSecondaryNoDisable"/>
 
 </RelativeLayout>
