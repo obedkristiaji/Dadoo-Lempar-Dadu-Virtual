@@ -4,21 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Context;
 import android.content.pm.ActivityInfo;
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.VibrationEffect;
-import android.os.Vibrator;
 import android.view.View;
 
 import id.ac.unpar.informatika.dadoo.databinding.ActivityMainBinding;
 import id.ac.unpar.informatika.dadoo.presenter.MainPresenter;
-import id.ac.unpar.informatika.dadoo.thread.ThreadHandler;
 import id.ac.unpar.informatika.dadoo.view.AboutFragment;
 import id.ac.unpar.informatika.dadoo.view.HomeFragment;
 

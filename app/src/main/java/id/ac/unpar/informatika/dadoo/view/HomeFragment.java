@@ -12,7 +12,6 @@ import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
@@ -20,15 +19,11 @@ import id.ac.unpar.informatika.dadoo.IMainActivity;
 import id.ac.unpar.informatika.dadoo.R;
 import id.ac.unpar.informatika.dadoo.databinding.FragmentHomeBinding;
 import id.ac.unpar.informatika.dadoo.presenter.IMainPresenter;
-import id.ac.unpar.informatika.dadoo.thread.RandomThread;
-import id.ac.unpar.informatika.dadoo.thread.ThreadHandler;
 
 public class HomeFragment extends Fragment implements View.OnClickListener, SensorEventListener {
     private FragmentHomeBinding binding;
     private IMainActivity listener;
     private IMainPresenter presenter;
-    private ThreadHandler handler;
-    private RandomThread thread;
     private SensorManager mSensorManager;
     private Sensor accelerometer;
     private float[] accelerometerReading = new float[3];
@@ -45,14 +40,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Sens
 
         this.accelerometer = this.mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        this.handler = new ThreadHandler(this.presenter);
-
         this.v = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
 
         this.binding.btnLempar.setOnClickListener(this);
         this.binding.btnTentang.setOnClickListener(this);
-
-        this.setGambar(4);
 
         return view;
     }
@@ -131,11 +122,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Sens
         }
     }
 
-    public void startThread() {
-        this.thread = new RandomThread(this.handler);
-        this.thread.start();
-    }
-
     public void vibrate() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             v.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
@@ -143,7 +129,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Sens
             //deprecated in API 26
             v.vibrate(200);
         }
-        this.startThread();
+        this.presenter.random();
     }
 
     @Override

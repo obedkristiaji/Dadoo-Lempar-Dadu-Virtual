@@ -9,8 +9,8 @@ android {
         applicationId "id.ac.unpar.informatika.dadoo"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 3001
-        versionName "0.3.1"
+        versionCode 3002
+        versionName "0.3.2"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
