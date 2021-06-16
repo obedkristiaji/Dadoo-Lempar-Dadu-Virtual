@@ -52,6 +52,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener, Sens
         this.binding.btnLempar.setOnClickListener(this);
         this.binding.btnTentang.setOnClickListener(this);
 
+        this.setGambar(4);
+
         return view;
     }
 
