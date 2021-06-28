@@ -38,20 +38,35 @@ public class MainActivity extends AppCompatActivity implements IMainActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        if (this.fragmentManager.getBackStackEntryCount() == 0) {
+            this.closeApplication();
+        }
+    }
+
+    @Override
     public void changePage(String page) {
         FragmentTransaction ft = this.fragmentManager.beginTransaction();
         switch (page) {
             case "Home": {
+                ft.replace(binding.fragmentContainer.getId(), this.fragmentHome, "Home").addToBackStack(null);
                 this.fragmentManager.popBackStackImmediate();
-                ft.replace(binding.fragmentContainer.getId(), this.fragmentHome).addToBackStack(null);
                 break;
             }
             case "About": {
-                ft.replace(binding.fragmentContainer.getId(), this.fragmentAbout).addToBackStack(null);
+                ft.replace(binding.fragmentContainer.getId(), this.fragmentAbout, "About").addToBackStack(null);
                 break;
             }
         }
         ft.commit();
+    }
+
+    @Override
+    public void closeApplication() {
+        this.moveTaskToBack(true);
+        this.finish();
     }
 
     @Override
